@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelProphet | AI Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1><span class="gradient-text">PixelProphet</span></h1>
+            <p>Turn your imagination into AI-generated art</p>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+
+        <!-- Main Input Section -->
+        <div class="input-section">
+            <div class="search-box">
+                <input type="text" id="prompt-input" placeholder="Describe an image (e.g., 'A cyberpunk city at night')">
+                <button id="generate-btn"><i class="fas fa-magic"></i> Generate</button>
+            </div>
+            <div class="prompt-suggestions">
+                <span>Try: </span>
+                <button class="suggestion-btn">"Astronaut riding a horse"</button>
+                <button class="suggestion-btn">"Watercolor landscape"</button>
+                <button class="suggestion-btn">"Futuristic robot"</button>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section">
+            <div class="loading-spinner" id="loading-spinner">
+                <div class="spinner"></div>
+                <p>AI is crafting your masterpiece...</p>
+            </div>
+            <div class="error-message" id="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Oops! AI needs a clearer prompt.</p>
+            </div>
+            <div class="image-result" id="image-result">
+                <!-- Generated image appears here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
